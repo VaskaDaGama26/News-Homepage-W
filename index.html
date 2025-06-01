@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="stylesheet" href="./styles/output.css" />
+  </head>
+  <body class="max-w-[1440px] mx-auto mt-10 lg:mt-16 px-4 lg:px-30">
+    <header class="flex flex-row justify-between items-center">
+      <div
+        id="bg-shadow"
+        class="w-full h-full hidden bg-black absolute top-0 left-0 z-40"
+      ></div>
+      <img src="./assets/images/logo.svg" alt="Logo" />
+      <nav
+        id="menu"
+        class="z-50 lg:block hidden lg:relative absolute w-2/3 lg:w-auto h-full text-xl lg:text-base lg:top-auto lg:right-auto top-0 right-0 bg-white transform lg:transform-none lg:translate-x-0 translate-x-full transition-transform duration-300 ease-in-out"
+      >
+        <ul
+          class="flex lg:m-0 mt-8 mx-6 lg:flex-row flex-col gap-6 lg:gap-8 text-(--VeryDarkBlue) lg:text-(--DarkGrayishBlue)"
+        >
+          <button class="flex justify-end lg:hidden mb-20" id="close-button">
+            <img src="./assets/images/icon-menu-close.svg" alt="Close" />
+          </button>
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+      </nav>
+      <button class="lg:hidden" id="menu-button">
+        <img src="./assets/images/icon-menu.svg" alt="Menu" />
+      </button>
+    </header>
+
+    <!-- Home New Popular Trending Categories The Bright Future of Web 3.0? We dive
+    into the next evolution of the web that claims to put the power of the
+    platforms back into the hands of the people. But is it really fulfilling its
+    promise? Read more New Hydrogen VS Electric Cars Will hydrogen-fueled cars
+    ever catch up to EVs? The Downsides of AI Artistry What are the possible
+    adverse effects of on-demand AI image generation? Is VC Funding Drying Up?
+    Private funding by VC firms is down 50% YOY. We take a look at what that
+    means. 01 Reviving Retro PCs What happens when old PCs are given modern
+    upgrades? 02 Top 10 Laptops of 2022 Our best picks for various needs and
+    budgets. 03 The Growth of Gaming How the pandemic has sparked fresh
+    opportunities. -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/VaskaDaGama26"
+        >Vasiliy Kirichenko</a
+      >.
+    </div> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.getElementById("menu-button");
+        const closeBtn = document.getElementById("close-button");
+        const shadow = document.getElementById("bg-shadow");
+        const menu = document.getElementById("menu");
+
+        // Открытие меню
+        menuBtn.addEventListener("click", () => {
+          // Показать тень
+          shadow.classList.remove("hidden");
+          shadow.classList.add("fade-in");
+
+          // Показать меню (без анимации)
+          menu.classList.remove("hidden");
+
+          // Немного подождать перед запуском выезда (чтобы hidden точно убрался)
+          requestAnimationFrame(() => {
+            menu.classList.remove("translate-x-full");
+            menu.classList.add("translate-x-0");
+          });
+        });
+
+        // Закрытие меню
+        function closeMenu() {
+          // Анимация тени
+          shadow.classList.remove("fade-in");
+          shadow.classList.add("fade-out");
+
+          // Убрать меню вправо
+          menu.classList.remove("translate-x-0");
+          menu.classList.add("translate-x-full");
+
+          // После завершения анимации (300ms)
+          setTimeout(() => {
+            menu.classList.add("hidden");
+            shadow.classList.add("hidden");
+            shadow.classList.remove("fade-out");
+          }, 300);
+        }
+
+        closeBtn.addEventListener("click", closeMenu);
+        shadow.addEventListener("click", closeMenu);
+      });
+    </script>
+  </body>
+</html>
