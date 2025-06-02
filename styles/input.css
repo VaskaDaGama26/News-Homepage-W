@@ -9,6 +9,9 @@
   --DarkGrayishBlue: hsl(236, 13%, 42%);
   --VeryDarkBlue: hsl(240, 100%, 5%);
 }
+@theme {
+  --tracking-button: 0.2rem;
+}
 
 @font-face {
   font-family: "Inter";
@@ -17,6 +20,7 @@
 
 html {
   font-family: "Inter", sans-serif;
+  background-color: var(--OffWhite);
 }
 
 .fade-in {
@@ -41,4 +45,18 @@ html {
   to {
     opacity: 0;
   }
+}
+
+.nav-link {
+  @apply text-(--VeryDarkBlue) hover:text-(--SoftRed) lg:text-(--DarkGrayishBlue) duration-300;
+}
+
+.new-wrap {
+  @apply flex flex-col gap-2
+}
+.new-heading {
+  @apply text-(--OffWhite) font-bold text-lg hover:text-(--SoftOrange) duration-300 cursor-pointer
+}
+.new-text {
+  @apply text-(--DarkGrayishBlue) text-sm
 }
