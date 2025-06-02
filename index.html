@@ -39,8 +39,9 @@
         <img src="./assets/images/icon-menu.svg" alt="Menu" />
       </button>
     </header>
+    <!-- MAIN -->
     <section
-      class="flex flex-col items-center lg:flex-row mt-12 gap-8 lg:items-stretch"
+      class="flex flex-col items-center lg:flex-row mt-12 gap-16 lg:gap-8 lg:items-stretch"
     >
       <div class="flex flex-col gap-8 lg:w-2/3 h-full">
         <img
@@ -109,6 +110,7 @@
         </div>
       </div>
     </section>
+    <!-- NUMERIC NEWS -->
 
     <!--     
      01 Reviving Retro PCs What happens when old PCs are given modern
@@ -125,50 +127,6 @@
         >Vasiliy Kirichenko</a
       >.
     </div> -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuBtn = document.getElementById("menu-button");
-        const closeBtn = document.getElementById("close-button");
-        const shadow = document.getElementById("bg-shadow");
-        const menu = document.getElementById("menu");
-
-        // Открытие меню
-        menuBtn.addEventListener("click", () => {
-          // Показать тень
-          shadow.classList.remove("hidden");
-          shadow.classList.add("fade-in");
-
-          // Показать меню (без анимации)
-          menu.classList.remove("hidden");
-
-          // Немного подождать перед запуском выезда (чтобы hidden точно убрался)
-          requestAnimationFrame(() => {
-            menu.classList.remove("translate-x-full");
-            menu.classList.add("translate-x-0");
-          });
-        });
-
-        // Закрытие меню
-        function closeMenu() {
-          // Анимация тени
-          shadow.classList.remove("fade-in");
-          shadow.classList.add("fade-out");
-
-          // Убрать меню вправо
-          menu.classList.remove("translate-x-0");
-          menu.classList.add("translate-x-full");
-
-          // После завершения анимации (300ms)
-          setTimeout(() => {
-            menu.classList.add("hidden");
-            shadow.classList.add("hidden");
-            shadow.classList.remove("fade-out");
-          }, 300);
-        }
-
-        closeBtn.addEventListener("click", closeMenu);
-        shadow.addEventListener("click", closeMenu);
-      });
-    </script>
+    <script src="./scripts/mobileMenu.js"></script>
   </body>
 </html>

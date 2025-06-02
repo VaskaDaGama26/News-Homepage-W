@@ -292,6 +292,12 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  .gap-16 {
+    gap: calc(var(--spacing) * 16);
+  }
   .border-1 {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -419,9 +425,9 @@
       margin-top: calc(var(--spacing) * 10);
     }
   }
-  .lg\:mb-8 {
+  .lg\:mt-16 {
     @media (width >= 64rem) {
-      margin-bottom: calc(var(--spacing) * 8);
+      margin-top: calc(var(--spacing) * 16);
     }
   }
   .lg\:block {
@@ -478,6 +484,11 @@
   .lg\:items-stretch {
     @media (width >= 64rem) {
       align-items: stretch;
+    }
+  }
+  .lg\:gap-8 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 8);
     }
   }
   .lg\:gap-12 {
