@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | News homepage</title>
+    <script type="module" crossorigin src="/NewsMainpage/assets/index-D3giUkDx.js"></script>
+    <link rel="stylesheet" crossorigin href="/NewsMainpage/assets/index-DcVpLKcH.css">
+  </head>
+  <body class="max-w-[1440px] mx-auto mt-6 lg:mt-10 px-4 lg:px-30">
+    <!-- HEADER -->
+    <header class="flex flex-row justify-between items-center">
+      <div
+        id="bg-shadow"
+        class="w-full h-full hidden bg-black absolute top-0 left-0 z-40"
+      ></div>
+      <img src="./assets/images/logo.svg" alt="Logo" />
+      <nav
+        id="menu"
+        class="nav z-50 lg:block hidden lg:relative absolute w-2/3 lg:w-auto h-full text-xl lg:text-base lg:top-auto lg:right-auto top-0 right-0 bg-white transform lg:transform-none lg:translate-x-0 translate-x-full transition-transform duration-300 ease-in-out"
+      >
+        <ul class="flex lg:m-0 mt-8 mx-6 lg:flex-row flex-col gap-6 lg:gap-12">
+          <button class="flex justify-end lg:hidden mb-20" id="close-button">
+            <img src="./assets/images/icon-menu-close.svg" alt="Close" />
+          </button>
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/" class="nav-link">New</a></li>
+          <li><a href="/" class="nav-link">Popular</a></li>
+          <li><a href="/" class="nav-link">Trending</a></li>
+          <li><a href="/" class="nav-link">Categories</a></li>
+        </ul>
+      </nav>
+      <button class="lg:hidden" id="menu-button">
+        <img src="./assets/images/icon-menu.svg" alt="Menu" />
+      </button>
+    </header>
+    <!-- MAIN -->
+    <section
+      class="flex flex-col items-center justify-between lg:flex-row mt-12 gap-16 lg:gap-8 lg:items-stretch"
+    >
+      <div class="main-news flex flex-col gap-8 lg:w-2/3 h-full">
+        <img
+          class="lg:block hidden"
+          src="./assets/images/image-web-3-desktop.jpg"
+          alt=""
+        />
+        <img
+          class="lg:hidden block"
+          src="./assets/images/image-web-3-mobile.jpg"
+          alt=""
+        />
+        <div class="main-text flex flex-col xl:flex-row gap-8">
+          <h1 class="font-extrabold text-4xl lg:text-6xl">
+            The Bright Future of Web 3.0?
+          </h1>
+          <div
+            class="flex flex-col justify-between gap-8 xl:gap-0 lg:max-w-[380px]"
+          >
+            <p class="text-(--DarkGrayishBlue)">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <button
+              class="uppercase cursor-pointer hover:bg-(--VeryDarkBlue) hover:text-(--OffWhite) duration-300 px-8 py-3 font-bold text-sm tracking-[.25em] bg-(--SoftRed) w-fit"
+            >
+              Read more
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="new-news flex flex-col justify-center lg:w-1/3 w-full min-h-full lg:max-w-[350px] px-6 py-8 bg-(--VeryDarkBlue)"
+      >
+        <h2 class="font-bold text-5xl text-(--SoftOrange) mb-8">New</h2>
+        <div class="flex flex-col gap-8">
+          <div class="new-wrap">
+            <h3 class="new-heading">
+              <a href="/">Hydrogen VS Electric Cars</a>
+            </h3>
+            <p class="new-text">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </div>
+          <hr class="border-1 border-(--DarkGrayishBlue)" />
+          <div class="new-wrap">
+            <h3 class="new-heading">
+              <a href="/">The Downsides of AI Artistry</a>
+            </h3>
+            <p class="new-text">
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <hr class="border-1 border-(--DarkGrayishBlue)" />
+          <div class="new-wrap">
+            <h3 class="new-heading">
+              <a href="/">Is VC Funding Drying Up?</a>
+            </h3>
+            <p class="new-text">
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- NUMERIC NEWS -->
+    <section>
+      <ul
+        class="numeric-list flex flex-col flex-wrap gap-6 lg:flex-row items-center justify-between mt-12 mb-24"
+      >
+        <li class="numeric-wrap">
+          <img
+            class="max-h-[140px]"
+            src="./assets/images/image-retro-pcs.jpg"
+            alt="News 1"
+          />
+          <div class="numeric-content">
+            <h3 class="numeric-heading"><a href="/">Reviving Retro PCs</a></h3>
+            <p class="numeric-text">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </li>
+        <li class="numeric-wrap">
+          <img
+            class="max-h-[140px]"
+            src="./assets/images/image-top-laptops.jpg"
+            alt="News 2"
+          />
+          <div class="numeric-content">
+            <h3 class="numeric-heading">
+              <a href="/">Top 10 Laptops of 2022</a>
+            </h3>
+            <p class="numeric-text">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </li>
+        <li class="numeric-wrap">
+          <img
+            class="max-h-[140px]"
+            src="./assets/images/image-gaming-growth.jpg"
+            alt="News 3"
+          />
+          <div class="numeric-content">
+            <h3 class="numeric-heading">
+              <a href="/">The Growth of Gaming</a>
+            </h3>
+            <p class="numeric-text">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <script src="./src/scripts/mobileMenu.js"></script>
+  </body>
+</html>
